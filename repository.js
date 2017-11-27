@@ -18,8 +18,9 @@ PersistentStorage.prototype.get = function get(key) {
     this.client.get(key, function (err, dataAsStr) {
         if (dataAsStr) {
             deferred.resolve(JSON.parse(dataAsStr));
+        } else {
+            throw new Error('shit');
         }
-        throw new Error('shit');
     });
     return deferred.promise;
 };
