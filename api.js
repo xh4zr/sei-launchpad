@@ -35,6 +35,7 @@ app.get('/authorize', function (req, res) {
 // full page SEI app
 // form for entering emails and examinee info
 app.get('/main', function (req, res) {
+    res.render('pages/main');
     var examId = req.query.exam_id;
     var token = req.query.jwt;
     if (!examId || !token) {

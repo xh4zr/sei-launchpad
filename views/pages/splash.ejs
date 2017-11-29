@@ -1,28 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Email Integration</title>
-    </head>
-    <style>
-        html, body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #eee;
-        }
-        
-        section {
-            width: 98%;
-            margin: 30px auto;
-            background: #fff;
-            border-radius: 10px;
-            padding: 10px 50px 30px;
-            box-sizing: border-box;
-        }
-    </style>
-    <body class="container">
-        <section>
-                <h1>Email Integration for SEI</h1>
-            <p>Quickly create new deliveries and send out delivery links to the candidates in bulk.</p>
-            <a href="<%= seiBase %>/integrate?caveon_id=<%= caveonId %>">Integrate</a>
+  <head>
+    <title>Launchpad Integration</title>
+  </head>
+  <style>
+    html, body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #eee;
+      background-image: linear-gradient(45deg, #eaeaea 25%, transparent 25%), linear-gradient(-45deg, #eaeaea 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #eaeaea 75%), linear-gradient(-45deg, transparent 75%, #eaeaea 75%);
+      background-size: 10px 10px;
+      background-position: 0 0, 0 5px, 5px -5px, -5px 0px;
+      color:#666;
+    }
+
+    section {
+      width: 98%;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 5px;
+      padding: 10px 30px 15px;
+      box-sizing: border-box;
+      max-width: 700px;
+    }
+    a {
+      width:100%;
+      max-width: 200px;
+      height: 50px;
+      background: #2097d7;
+      text-align: center;
+      line-height: 50px;
+      display: block;
+      color:#fff;
+      text-decoration: none;
+      margin: 25px auto 15px auto;
+      transition: 0.2s
+    }
+    a:hover {
+      background: #088fd8;
+    }
+    p {
+      line-height: 150%;
+    }
+  </style>
+  <body class="container">
+    <section>
+      <h1>Launchpad Integration for SEI</h1>
+      <p>
+        An exam launchpad is a way to allow users to take your exam without having to create deliveries for each individual user. The launchpad will collect all necessary information from the user, and if desired, process a payment.
+      </p>
+      <p>
+        Use the button below to integrate with section
+      </p>
+      <a href="<%= seiBase %>/integrate?caveon_id=<%= caveonId %>">Integrate</a>
     </section>
-    </body>
+  </body>
 </html>
